@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import SwiftUI
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -9,5 +10,17 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+}
+
+struct YourApp: App {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate: AppDelegate
+  var body: some Scene {
+    let viewModel = AppViewModel()
+    WindowGroup {
+      NavigationView {
+        ContentView()
+      }
+    }
   }
 }

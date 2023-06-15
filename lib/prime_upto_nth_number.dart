@@ -5,7 +5,6 @@ void main() {
   print("Enter the number of test cases");
   int tcases = int.parse(stdin.readLineSync()!);
   for (int i = 0; i < tcases; i++) {
-    List res = [];
     print("Enter end number");
     int number = int.parse(stdin.readLineSync()!);
     for (int i = 2; i < number; i++) {
